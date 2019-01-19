@@ -4,22 +4,10 @@ module.exports = {
     entry: [
         "./src/index.tsx"
     ],
-    mode: "development",
-    devtool: 'source-map',
-    watch: true,
-    watchOptions: {
-        ignored: /node_modules/
-    },
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
         publicPath: '/dist'
-    },
-    devServer: {
-        historyApiFallback: true,
-    },
-    resolve: {
-        extensions: [".ts", ".tsx", ".js", ".json"]
     },
     module: {
         rules: [
