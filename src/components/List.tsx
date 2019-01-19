@@ -17,7 +17,7 @@ export default class List extends React.Component<any, any>{
         };
 
         console.log("START - Creating data.", new Date());
-        for (var i = 0; i < 5000; i++) {
+        for (var i = 0; i < 100; i++) {
             this.colors.push(this.getNewColor());
         }
         console.log("END - Creating data.", new Date());
@@ -62,7 +62,7 @@ export default class List extends React.Component<any, any>{
 
         return (
             <div>
-                <select size={25}>
+                <select size={25} style={{ width: "100%" }}>
                     {this.state.colors.map((color, idx) => {
                         return <ListItem key={color.backGroundName + `_${idx}`} value={color.backGroundName}
                             text={`${idx + 1} - ` + color.backGroundName} backgroundColor={color.backGroundHex} foreColor={color.foreColor}>
