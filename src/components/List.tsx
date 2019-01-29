@@ -17,7 +17,7 @@ export default class List extends React.Component<any, any>{
         };
 
         console.log("START - Creating data.", new Date());
-        for (var i = 0; i < 100; i++) {
+        for (var i = 0; i < 5000; i++) {
             this.colors.push(this.getNewColor());
         }
         console.log("END - Creating data.", new Date());
